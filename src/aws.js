@@ -47,10 +47,7 @@ async function startEc2Instance(label, githubRegistrationToken) {
     SecurityGroupIds: [config.input.securityGroupId],
     IamInstanceProfile: { Name: config.input.iamRoleName },
     TagSpecifications: config.tagSpecifications,
-    NetworkInterfaces: [{
-      AssociatePublicIpAddress: Boolean(config.input.associatePublicIpAddress),
-      DeviceIndex: 0
-    }]
+    KeyName: 'testing-actions'
   };
 
   try {

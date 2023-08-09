@@ -37,12 +37,6 @@ inputs:
       The runner doesn't require any inbound traffic. However, outbound traffic should be allowed.
       This input is required if you use the 'start' mode.
     required: false
-  create-public-ip:
-    description: >-
-      EC2 Public IP. 
-      This will create a public IP for your EC2 instance.
-      This input is required if you use the 'start' mode.
-    required: false
   label:
     description: >-
       Name of the unique label assigned to the runner.
