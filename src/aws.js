@@ -48,7 +48,8 @@ async function startEc2Instance(label, githubRegistrationToken) {
     IamInstanceProfile: { Name: config.input.iamRoleName },
     TagSpecifications: config.tagSpecifications,
     NetworkInterfaces: [{
-      AssociatePublicIpAddress: Boolean(config.input.associatePublicIpAddress)
+      AssociatePublicIpAddress: Boolean(config.input.associatePublicIpAddress),
+      DeviceIndex: 0
     }]
   };
 
