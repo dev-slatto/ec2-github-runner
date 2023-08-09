@@ -50,7 +50,7 @@ async function startEc2Instance(label, githubRegistrationToken) {
     KeyName: 'testing-actions',
     BlockDeviceMappings: [
       {
-        DeviceName: '/dev/xvda',
+        DeviceName: '/dev/sda1',
         Ebs: {
           DeleteOnTermination: true,
           VolumeSize: '24',
